@@ -1,0 +1,228 @@
+body {
+    font-family: 'Montserrat';
+    font-size: 22px;
+}
+header {
+    background: #00caeb;
+    overflow: hidden;
+    box-shadow: 0 0 10px #d3d3d3;
+}
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    /* Change the color as needed */
+}
+.header-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    /* Add space between items */
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+.text-overflow{
+    text-overflow: ellipsis;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: #00caeb;
+  border: none;
+  cursor: pointer;
+  margin: 0px 25px 15px;
+  min-width: 150px;
+}
+
+.btn:hover{
+    background-color: #003239!important;
+}
+
+.header-item li a{
+    margin: 0 15px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: all 1s ;
+}
+.header-item li a:hover{
+    color: #003239;
+    text-decoration: none;
+
+}
+.collections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content {
+    width: 330px;
+    margin: 30px;
+    position: relative;
+}
+.content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+.content:hover::after {
+    opacity: 1;
+}
+.content img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    object-fit: cover;
+}
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+.img-content .img-date{
+    font-size: 10px;
+}
+.img-content p {
+    font-size: 1.6rem;
+}
+.img-content a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+.content:hover .img-content {
+    opacity: 1;
+    top: 50%;
+}
+.main-carousel {
+    position: relative;
+    height: 600px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.main-carousel .carousel {
+    margin: 30px 0 30px 0;
+    width: 100%;
+}
+.main-carousel .carousel .items {
+    width: 100%;
+}
+.main-carousel .carousel .items .carousel-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s all;
+}
+.main-carousel .carousel .items .current {
+    opacity: 1;
+}
+.main-carousel .buttons #prevBtn,
+.main-carousel .buttons #nextBtn {
+    height: 10px;
+    width: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    position: absolute;
+}
+.main-carousel .buttons #prevBtn:hover,
+.main-carousel .buttons #nextBtn:hover {
+    opacity: 1;
+}
+.main-carousel .buttons #prevBtn {
+    top: 50%;
+    left: 3%;
+}
+.main-carousel .buttons #nextBtn {
+    top: 50%;
+    right: 3%;
+}
+
+.blog-post {
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.blog-post img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.blog-post .category {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #e67e22;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+.text-content {
+    position: absolute;
+    bottom: -30px;
+    padding: 20px;
+    background-color: #fff;
+    width: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding-top: 50px;
+}
+.text-content h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text-content p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.card {
+    border-radius: 0%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+.footer-section {
+    margin-bottom: 30px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}

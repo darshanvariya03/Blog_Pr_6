@@ -1,0 +1,40 @@
+<%- include('header') %>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Edit Movie</h1>
+        <div class="col-md-6">
+            <form method="post" action="/updateRecord" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<%= single.id %>" />
+                <table class="table">
+                    <tr>
+                        <td>Blog Name:</td>
+                        <td><input type="text" name="name" value="<%= single.name %>" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Blog Description :</td>
+                        <td><input type="text" name="des" value="<%= single.des %>" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Blog date:</td>
+                        <td><input type="date" name="date" value="<%= single.date %>" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Blog Image</td>
+                        <td>
+                            <input type="file" name="avatar" class="form-control" />
+                            <img src="<%= single.image %>" width="100" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" class="btn btn-success"></td>
+                    </tr>
+                </table>
+            </form>
+            <a href="/" class="btn btn-primary">View</a>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') %>

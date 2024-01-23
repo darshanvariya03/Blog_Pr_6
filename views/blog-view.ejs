@@ -1,0 +1,22 @@
+<%- include('header')  %>
+    <div class="container">
+        <div class="card blog-data-post mt-5 mb-3">
+            <img src="<%= blog.image %>" class="card-img-top" alt="Post Image">
+            <div class="card-body w-100 h-50 text-content">
+                <p class="card-text subpage-exp-content">
+                    <%= blog.date %>
+                </p>
+                <h2 class="card-title text-bold post-title">
+                    <%= blog.name %>
+                </h2>
+                <p class="card-text subpage-exp-content">
+                    <%= blog.des %>
+                </p>
+                <a href="/deleteData?id=<%= blog.id %>" class="btn btn-danger">Delete</a>
+                <a href="/editData?id=<%= blog.id %>" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
+        <a href="/" class="btn btn-primary subpage-readmore-btn mt-5">Back</a>
+    </div>
+
+<%- include('footer')  %>

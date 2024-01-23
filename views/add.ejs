@@ -1,0 +1,34 @@
+<%- include('header') %>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1>Add Blog</h1>
+            <div class="col-md-6">
+                <form method="post" action="/addData" enctype="multipart/form-data">
+                    <table class="table table-bordered mt-5">
+                        <tr>
+                            <td>Blog Title</td>
+                            <td><input type="text" name="name" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td>Blog Description</td>
+                            <td><input type="text" name="des" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td>Blog Date</td>
+                            <td><input type="date" name="date" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td>Blog Image</td>
+                            <td><input type="file" name="avatar" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit" class="btn btn-success"></td>
+                        </tr>
+                    </table>
+                </form>
+                <a href="/" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+<%- include('footer') %>
